@@ -1,63 +1,51 @@
+# this is the "game.py" file...
+
+# IMPORT RANDOM : needed for computer choice section below
 import random
 
-
-print("Rock, Paper, Scissors, Shoot!")
-
-
+# WELCOME MESSAGE
+print("Welcome Player One! Lets play Rock, Paper, Scissors, Shoot!")
 
 # USER INPUTS
-
-
-user_choice = input("Please make a selection ('rock' 'paper', 'scissors'):")
-user_choice = user_choice.lower()
+humans_choice = input("Please make a selection ('rock' 'paper', 'scissors'):")
+humans_choice = humans_choice.lower()
 
 #You chose: 'rock'
-print("You chose:", user_choice)
-print(f"You chose: '{user_choice}' ")
+print(f"You chose: '{humans_choice}' ")
 
 # VALIDATE USER INPUTS 
-
 valid_options = ["rock", "paper", "scissors"]
 
-#breakpoint()
-
-#if user_choice in valid_options:
-#    # ALL THE STUFF INDENTED 
-#   pass
-#else:
-#    print("OPPS INVALID TRY AGAIN")
-
-
-if user_choice not in valid_options:
-    print("OPPS INVALID TRY AGAIN")
-    exit() # quit ()
+if humans_choice not in valid_options:
+    print("Your selection is invalid. Rerun the game to try again!")
+    exit()
 
 #COMPUTER CHOICE    
-
-#import random
-
-
 computer_choice = random.choice(valid_options)
-print("Computer Choice:", computer_choice)
+print("Computer chose:", computer_choice)
 
 # DETERMINE THE WINNER 
 
 #adapted from code shared in Slack by Bonnie:
 # https://nyu-tech-2335.slack.com/archives/C5WPFSB52/p1657672686150239
-if user_choice == computer_choice:
+
+if humans_choice == computer_choice:
     print("It's a tie!")
-elif user_choice == "rock":
+elif humans_choice == "rock":
     if computer_choice == "scissors":
-        print("Rock crushes scissors. You win!")
+        print("YOU WIN! Rock beats scissors!")
     else:
-        print("Paper covers rock. You lose.")
-elif user_choice == "paper":
+        print("You lose :( Paper beats rock. Better luck next time!")
+elif humans_choice == "paper":
     if computer_choice == "rock":
-        print("Paper covers rock. You win!")
+        print("YOU WIN! Paper beats rock!")
     else:
-        print("Scissors cuts paper. You lose.")
-elif user_choice == "scissors":
+        print("You lose :( Scissors beats paper. Better luck next time!")
+elif humans_choice == "scissors":
     if computer_choice == "paper":
-        print("Scissors cuts paper. You win!")
+        print("YOU WIN! Scissors beats paper!")
     else:
-        print("Rock crushes scissors. You lose.")
+        print("You lose :( Rock beats scissors. Better luck next time!")
+
+#FAREWELL MESSAGE
+print("Thanks for playing! See you next time")
