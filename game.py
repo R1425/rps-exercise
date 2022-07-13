@@ -23,4 +23,4 @@ print(f"You chose: '{user_choice}' ")
 
 valid_options = ["rock", "paper", "scissors"]
 computer_choice = random.choice(valid_options)
-print("Computer Choise:", computer_choice)
+print("Computer Choice:", computer_choice)
