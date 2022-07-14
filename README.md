@@ -14,7 +14,7 @@ The [rps-exercise repository](https://github.com/R1425/rps-exercise) can either 
 1. Forked (creating a copy of the repository) then cloned to create the remote repository on your local computer, or 
 2. Cloned directly from the rps-exercise repository
 
-*REMEMBER WHERE YOU CLONED THE REPOSITORY TO ON YOUR LOCAL COMPUTER*
+***REMEMBER WHERE YOU CLONED THE REPOSITORY TO ON YOUR LOCAL COMPUTER***
 
 Navigate to where you downloaded the respository using the command-line.  For the sake of this README file, we will assume we used the "Documents" folder:
 
