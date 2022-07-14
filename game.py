@@ -3,8 +3,14 @@
 # IMPORT RANDOM : needed for computer choice section below
 import random
 
+# IMPORT OS : needed for human player to select their name
+import os
+
+#NAMING THE HUMAN PLAYER
+player_name = os.getenv("PLAYER_NAME", default ="Player One")
+
 # WELCOME MESSAGE
-print("Welcome Player One! Lets play Rock, Paper, Scissors, Shoot!")
+print(f"Welcome {player_name} Lets play Rock, Paper, Scissors, Shoot!")
 
 # USER INPUTS
 humans_choice = input("Please make a selection ('rock' 'paper', 'scissors'):")
